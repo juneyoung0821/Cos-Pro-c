@@ -1,0 +1,183 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int cur, is;
+
+    // 구구단을 출력하는 이중 루프
+    for (cur = 2; cur < 10; cur++) // 구구단의 단(cur)을 2부터 9까지 반복
+    {
+        for (is = 1; is < 10; is++) // 각 단(cur)에서 1부터 9까지 곱하는 값을 출력
+        {
+            printf("%d X %d = %d \n", cur, is, cur * is);
+        }
+        printf("\n"); // 한 단(cur)이 끝나면 줄바꿈
+    }
+    
+    return 0;
+}
+
+	
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int num = 0; // 변수 num을 선언하고 0으로 초기화합니다.
+
+    while (num < 3) // num이 3보다 작은 동안 반복합니다.
+    {
+        printf("%d \n", num); // 현재 num 값을 출력합니다.
+        num++; // num 값을 1씩 증가시킵니다.
+    }
+
+    return 0;
+}
+
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int dan = 0, num = 1; // 변수 dan과 num을 선언하고 초기값을 지정합니다.
+
+    printf("몇 단? : ");
+    scanf("%d", &dan); // 사용자로부터 단 수를 입력받습니다.
+
+    while (num < 10) // num이 10보다 작은 동안 반복합니다.
+    {
+        printf("%d X %d = %d \n", dan, num, dan * num); // 단(dan)과 곱할 숫자(num)를 출력합니다.
+        num++; // num 값을 1씩 증가시킵니다.
+    } // while 루프 종료
+
+    return 0;
+}
+
+/*
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int cur = 2; // 단(cur)의 초기값을 2로 설정합니다.
+    int is = 0; // 곱할 숫자(is)의 초기값을 0으로 설정합니다.
+
+    while (cur < 10) // 단(cur)이 10보다 작은 동안 반복합니다.
+    {
+        is = 1; // 곱할 숫자(is)의 값을 1로 초기화합니다.
+
+        while (is < 10) // 곱할 숫자(is)가 10보다 작은 동안 반복합니다.
+        {
+            printf("%d X %d = %d\n", cur, is, cur * is); // 현재 단(cur)과 곱할 숫자(is)를 곱하여 결과를 출력합니다.
+            is++; // 곱할 숫자(is)를 1 증가시킵니다.
+        } // 내부 while 루프 종료
+
+        cur++; // 다음 단(cur)으로 이동합니다.
+    } // 외부 while 루프 종료
+
+    return 0;
+}
+
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int dan = 0; // 구구단의 단을 나타내는 변수
+    int num = 1; // 각 단에서 곱해지는 숫자를 나타내는 변수
+
+    printf("몇 단? : ");
+    scanf("%d", &dan); // 사용자로부터 단 수를 입력받습니다.
+
+    do {
+        // 현재 단(dan)과 곱할 숫자(num)를 곱하여 결과를 출력합니다.
+        printf("%d X %d = %d \n", dan, num, dan * num);
+
+        num++; // 곱할 숫자(num)를 1 증가시킵니다.
+    } while (num < 10); // num이 10보다 작은 동안 반복합니다.
+
+    return 0;
+}
+
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int num; // 반복을 제어할 변수
+
+    // for 루프를 사용하여 3번 반복하며 "Hi for"를 출력합니다.
+    for (num = 0; num < 3; num++)
+    {
+        printf("Hi for \n");
+    }
+
+    num = 0; // num 값을 다시 0으로 초기화합니다.
+
+    // while 루프를 사용하여 3번 반복하며 "Hi while"를 출력합니다.
+    while (num < 3)
+    {
+        printf("Hi while \n");
+        num++; // num 값을 1씩 증가시킵니다.
+    }
+
+    return 0;
+}
+
+/*
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int total = 0; // 총합을 저장할 변수
+    int i, num; // 반복을 제어할 변수와 사용자로부터 입력 받은 값
+
+    printf("0부터 num까지의 덧셈 num은? : ");
+    scanf("%d", &num); // 사용자로부터 num 값을 입력 받습니다.
+
+    for (i = 0; i < num + 1; i++) // 0부터 num까지 반복합니다.
+    {
+        total += i; // total에 i를 더합니다.
+        printf("0부터 %d까지 덧셈 결과 : %d\n", i, total); // 현재까지의 덧셈 결과를 출력합니다.
+    } // for 루프 종료
+
+    return 0;
+}
+
+*/
+
+/*
+		#include <stdio.h>
+
+int main(void)
+{
+    double total = 0.0; // 입력된 숫자들의 총합을 저장할 변수
+    double input = 0.0; // 사용자로부터 입력받은 숫자를 저장할 변수
+    int num = 0; // 입력된 숫자의 개수를 저장할 변수
+
+    // 루프를 통해 사용자로부터 숫자를 입력받고, 입력이 음수가 될 때까지 더합니다.
+    for (; input >= 0.0; )
+    {
+        total += input; // 입력된 숫자를 총합에 더합니다.
+        printf("실수 입력(minus to quit) : ");
+        scanf("%lf", &input); // 사용자로부터 숫자를 입력받습니다.
+        num++; // 입력된 숫자의 개수를 증가시킵니다.
+    }
+
+    printf("\n");
+    printf("total sum = %.2lf \n\n", total); // 총합을 출력합니다.
+    printf("평균 : %.2f \n", total / (num - 1)); // 평균을 출력합니다.
+    
+    return 0;
+}
+
+*/
